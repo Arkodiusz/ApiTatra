@@ -17,8 +17,6 @@ public class PeekMapper {
                 peekDto.getLatitude(),
                 peekDto.getLongitude(),
                 peekDto.getElevation(),
-                peekDto.getGpsElevation(),
-                (peekDto.getImageUrl()!= null) ? peekDto.getImageUrl() : "",
                 (peekDto.getDescription()!= null) ? peekDto.getDescription() : ""
         );
     }
@@ -30,8 +28,6 @@ public class PeekMapper {
                 peek.getLatitude(),
                 peek.getLongitude(),
                 peek.getElevation(),
-                peek.getGpsElevation(),
-                peek.getImageUrl(),
                 peek.getDescription()
         );
     }

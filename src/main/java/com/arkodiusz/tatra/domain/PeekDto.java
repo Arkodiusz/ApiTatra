@@ -13,7 +13,5 @@ public class PeekDto {
     private double latitude;
     private double longitude;
     private double elevation;
-    private double gpsElevation;
-    private String imageUrl;
     private String description;
 }

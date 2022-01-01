@@ -28,10 +28,6 @@ public class Peek {
     @Column(nullable = false)
     private double elevation;
 
-    private double gpsElevation;
-
-    private String imageUrl = "";
-
     @Column(name = "description", length = 4000)
     private String description = "";
 

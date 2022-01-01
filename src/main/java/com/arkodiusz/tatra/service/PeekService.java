@@ -13,12 +13,21 @@ public class PeekService {
 
     private final PeekRepository repository;
 
+    public Peek fetchPeek(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Peek with id " + id + " not found"));
+    }
+
     public List<Peek> fetchAllPeeks() {
         return repository.findAll();
     }
 
-    public Peek createPeek(Peek peek) {
+    public Peek createOrUpdatePeek(Peek peek) {
         return repository.save(peek);
+    }
+
+    public void deletePeek(Long id) {
+        repository.deleteById(id);
     }
 
 }
